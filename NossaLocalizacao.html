@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nossa Localização</title>
+    <link rel="icon" type="img" img href="image/raven_games-removebg-preview (1).png">
+    <link rel="stylesheet" href="home.css">
+    <style>
+        #long{
+            display:flex;
+            flex-direction: row;
+        }
+        .mapouter{
+            margin-top: -700px;
+            margin-left: 700px;
+        }
+    </style>
+</head>
+<body>
+    <div id="header"><a href="http://127.0.0.1:5500/e-commerce%20gamer/NossaLocalizacao.html">
+        <img class="img1-1" src="image/raven_games-removebg-preview (1).png"></a>
+
+            <a href="http://127.0.0.1:5500/e-commerce%20gamer/user.html">
+            <img class="img1" src="image/user.png"></a>
+
+        <a href="http://127.0.0.1:5500/e-commerce%20gamer/ajuda.html">
+        <img class="img1" src="image/ajuda.png"></a>
+        
+            <a href="http://127.0.0.1:5500/e-commerce%20gamer/home.html">
+            <img class="img1" src="image/home2.png"></a>
+            
+        
+        <div id="divBusca">
+            <input type="text" id="txtBusca" placeholder="O que você procura hoje..."/>
+            
+            </div>
+          </div>
+    </div>
+    <hr id="hr">
+
+    <div id="navegador"><div><h2>Nossa Localização</h2></div>
+
+        <div long>
+        <p>Latitude: <span id="latitude"></span></p>
+        <p>Longitude: <span id="longitude"></span></p>
+        <div id="map"></div>
+        <button onclick="getLocation()">Obter Localização</button></div>
+      
+        <br>
+          <br>
+          <div class="mapouter"><div class="gmap_canvas"><iframe src="https://maps.google.com/maps?q=Descalvado&amp;t=&amp;z=13&amp;ie=UTF8&amp;iwloc=&amp;output=embed" frameborder="0" scrolling="no" style="width: 400px; height: 400px;"></iframe><style>.mapouter{position:relative;height:400px;width:400px;background:#fff;} .maprouter a{color:#fff !important;position:absolute !important;top:0 !important;z-index:0 !important;}</style><a href="https://blooketjoin.org/blooket-login/">blooket login</a><style>.gmap_canvas{overflow:hidden;height:400px;width:400px}.gmap_canvas iframe{position:relative;z-index:2}</style></div></div>
+
+   
+    </div>
+    </div>
+
+    <hr id="hr">
+
+    <div id="footer">
+        <a href="https://web.whatsapp.com/"><img class="img3" src="image/what.png"></a>
+        <a href="#"><img class="img1" src="image/email.png"></a>
+        <a href="https://pt-br.facebook.com/"><img class="img1" src="image/facebook.png"></a>
+        <a href="https://www.instagram.com/"><img class="img4" src="image/instag.png"></a>
+    </div>
+      </div>
+
+      <script>
+        let map;
+    
+        function initMap(latitude, longitude) {
+          if (!isNaN(parseFloat(latitude)) && !isNaN(parseFloat(longitude))) {
+            map = new google.maps.Map(document.getElementById('map'), {
+              center: { lat: parseFloat(latitude), lng: parseFloat(longitude) },
+              zoom: 12
+            });
+    
+            new google.maps.Marker({
+              position: { lat: parseFloat(latitude), lng: parseFloat(longitude) },
+              map: map,
+              title: 'Sua Localização'
+            });
+          } else {
+            // alert('Coordenadas inválidas.');
+          }
+        }
+    
+        function getLocation() {
+          if (navigator.geolocation) {
+            navigator.geolocation.getCurrentPosition(showPosition, showError);
+          } else {
+            alert('Geolocalização não é suportada por este navegador.');
+          }
+        }
+    
+        function showPosition(position) {
+          const latitudeElement = document.getElementById('latitude');
+          const longitudeElement = document.getElementById('longitude');
+    
+          latitudeElement.innerText = position.coords.latitude;
+          longitudeElement.innerText = position.coords.longitude;
+    
+          initMap(position.coords.latitude, position.coords.longitude);
+        }
+    
+        function showError(error) {
+          switch(error.code) {
+            case error.PERMISSION_DENIED:
+              alert('Permissão para geolocalização foi negada pelo usuário.');
+              break;
+            case error.POSITION_UNAVAILABLE:
+              alert('Informações de localização indisponíveis.');
+              break;
+            case error.TIMEOUT:
+              alert('Tempo limite esgotado ao tentar obter a localização.');
+              break;
+            case error.UNKNOWN_ERROR:
+              alert('Ocorreu um erro desconhecido ao tentar obter a localização.');
+              break;
+          }
+        }
+      </script>
+      <!-- Importando a API do Google Maps -->
+      <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCAEQGPRJs0BMv-oNbAV6H5IvWf-0IOAJs&callback=initMap"></script>
+</body>
+</html>

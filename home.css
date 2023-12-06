@@ -1,0 +1,121 @@
+body{
+    width:99%;
+    height:auto;
+    background-image: url(image/fundo.jpg);
+    /*background-image:linear-gradient(to bottom,rgb(47, 54, 255)35%,rgb(6, 0, 167));*/
+}
+#bloco{
+    width:auto;
+    height:auto;
+    border:5px solid rgb(0, 3, 85);
+    background-color: rgb(255, 255, 255);
+    background-image: url(image/fundo.jpg);
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    justify-content:center;
+}
+#header{
+    width: 99%;
+    height: 100px;
+    border: 3px solid none;
+    display: flex;
+    align-items:center ;
+    justify-content:space-around;
+}
+#navegador{
+    width: 99%;
+    height: 532px;
+    border: 0px solid none;
+    background-color: none;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items:center ;
+    justify-content: space-around;
+}
+#footer{
+    width: 99%;
+    height: 70px;
+    border: 3px solid none;
+    background-color:none;
+    color: white;
+    display: flex;
+    font-family: Arial, Helvetica, sans-serif;
+    align-items: center;
+    justify-content: space-around;
+}
+#artigo{
+    width: 50%;
+    height: 100px;
+    border: 3px solid red;
+    background-color: dimgray;
+    color: rgb(191, 0, 0);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.button {
+    width: 200px;
+    height:40px;
+    background-color: #4294ff;
+    border-radius: 100px;
+    color: black;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+#produto{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 80%;
+    height:180px ;
+    background: rgb(255, 255, 255);
+    border-radius: 5px;
+}
+.img1{
+    width: 70px;
+    height: 70px;
+}
+.img1-1{
+    width: 150px;
+    height: 120px;
+}
+.hr{
+    background-color: #4294ff;
+    color: #4294ff;
+}
+.div2{
+    width: 70px;
+    background-color:rgb(255, 165, 0);
+    border: none;
+}
+#divBusca{
+    border-radius: 5px solid black;
+
+}
+.img2{
+    width: 150px;
+    height: 150px;
+    border:3px solid white 
+}
+.img3{
+    width: 110px;
+    height: 110px;
+}
+.img4{
+    width: 95px;
+    height: 95px;
+    border:3px solid none
+}
+.coluna{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}

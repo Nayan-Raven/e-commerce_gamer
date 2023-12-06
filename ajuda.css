@@ -1,0 +1,200 @@
+body{
+    width:99%;
+    height:auto;
+    /*background-image:linear-gradient(to bottom,rgb(47, 54, 255)35%,rgb(6, 0, 167));*/
+    background-image: url(image/fundo.jpg);
+}
+#bloco{
+    width:auto;
+    height:auto;
+    border:5px solid rgb(0, 3, 85);
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    justify-content:center;
+}
+#header{
+    width: 99%;
+    height: 100px;
+    border: 3px solid none;
+    background-color: rgba(255, 166, 0, 0);
+    color: rgb(191, 0, 0);
+    display: flex;
+    align-items:center ;
+    justify-content:space-around;
+}
+#navegador{
+    width: 99%;
+    height: 553px;
+    border: 3px solid noe;
+    background-color: none;
+    color: white;
+    display: flex;
+    flex-direction: row;
+    align-items:center ;
+    justify-content: space-around;
+}
+#footer{
+    width: 99%;
+    height: 70px;
+    border: 3px solid none;
+    background-color:none;
+    color: white;
+    display: flex;
+    font-family: Arial, Helvetica, sans-serif;
+    align-items: center;
+    justify-content: space-around;
+}
+.button {
+    width: 200px;
+    height:40px;
+    background-color: #4294ff;
+    border-radius: 100px;
+    color: black;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+#produto{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    color: white;
+    width: 80%;
+    height: 100px;
+}
+.img1{
+    width: 70px;
+    height: 70px;
+}
+.img1-1{
+    width: 150px;
+    height: 120px;
+}
+.hr{
+    background-color: #4294ff;
+    color: #4294ff;
+}
+.div2{
+    width: 70px;
+    background-color:rgb(255, 165, 0);
+    border: none;
+}
+#divBusca{
+    border-radius: 1px solid black;
+}
+.img2{
+    width: 150px;
+    height: 150px; 
+    border: 3px solid none;  
+}
+h1{color: white;}
+.coluna{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+.imgmario{
+    margin-top: -100px;
+    height: 200px;
+    width: 200px;
+
+}
+#area
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width:600px;
+    height:50px;
+}
+/* Customize the label (the container) */
+.container {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 22px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+  
+  /* Hide the browser's default checkbox */
+  .container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+  }
+  
+  /* Create a custom checkbox */
+  .checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: #eee;
+  }
+  
+  /* On mouse-over, add a grey background color */
+  .container:hover input ~ .checkmark {
+    background-color: #ccc;
+  }
+  
+  /* When the checkbox is checked, add a blue background */
+  .container input:checked ~ .checkmark {
+    background-color: #2196F3;
+  }
+  
+  /* Create the checkmark/indicator (hidden when not checked) */
+  .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+  
+  /* Show the checkmark when checked */
+  .container input:checked ~ .checkmark:after {
+    display: block;
+  }
+  
+  /* Style the checkmark/indicator */
+  .container .checkmark:after {
+    left: 9px;
+    top: 5px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+  .img2{
+    width: 150px;
+    height: 150px;  
+}
+.img4{
+    width: 95px;
+    height: 95px;
+    border:3px solid none
+}
+.img3{
+    width: 110px;
+    height: 110px;
+}
+.enviar{
+    width: 150px;
+    height: 50px;
+  }
+  
